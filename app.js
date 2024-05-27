@@ -72,7 +72,29 @@ function questionFour(v) {
 // Write a program that takes an integer as input and returns an integer with reversed digit 
 // ordering
 const btn5 = document.querySelector(".quest5");
-btn5 === null || btn5 === void 0 ? void 0 : btn5.addEventListener("click", () => questionFive(-56));
+btn5.addEventListener("click", () => questionFive(500));
 function questionFive(n) {
+    let isNegative = n < 0;
+    let finalNumber = Math.abs(n).toString().split('').reverse().join('');
+    if (isNegative) {
+        finalNumber = finalNumber;
+        console.log('-' + finalNumber);
+    }
+    // 
+    console.log(+finalNumber);
 }
 // questionFive(-1)
+// Question 6: Count Vowels
+// Write a program that counts the number of vowels in a sentence.
+const btn6 = document.querySelector(".quest6");
+btn6.addEventListener("click", () => questionSix('this is a beautiful town'));
+function questionSix(vowel) {
+    let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+    let vowel_count = 0;
+    for (let v of vowel) {
+        if (vowels.includes(v)) {
+            vowel_count += 1;
+        }
+    }
+    console.log(vowel, "= ", vowel_count);
+}
