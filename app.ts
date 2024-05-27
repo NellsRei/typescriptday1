@@ -87,17 +87,18 @@ function questionFour(v: string) {
 // ordering
 
 const btn5 = document.querySelector(".quest5")!
-btn5.addEventListener("click", () => questionFive(500))
+btn5.addEventListener("click", () => questionFive(-576))
 
 function questionFive(n:number){
     let isNegative = n<0
     let finalNumber = Math.abs(n).toString().split('').reverse().join('')
     if(isNegative){
-        finalNumber = finalNumber
-        console.log('-'+ finalNumber) 
+        console.log('-'+ +finalNumber) 
+    }else{
+        console.log(+finalNumber)
     }
     // 
-    console.log(+finalNumber) 
+     
 }
 
 // questionFive(-1)
